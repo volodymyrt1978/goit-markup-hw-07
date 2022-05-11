@@ -84,7 +84,7 @@ body {
 /* разбиваю текст логотипа на две части по цвету шрифта*/
 .header-decor {
     border-bottom: var(--header-bottom-border) solid #ECECEC;
-}
+} /*_page-header.scss*/
 
 .logo-header {
     padding-top: 24px;

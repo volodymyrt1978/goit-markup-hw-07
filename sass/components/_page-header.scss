@@ -1,0 +1,151 @@
+.header-decor {
+    border-bottom: $Header-Bottom-Border solid #ECECEC;
+}
+
+.logo-header {
+    padding-top: 24px;
+    padding-bottom: 25px;
+}
+
+.logo-header,
+.logo-footer {
+    font-family: Raleway, sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+}
+
+.logo-start {
+    color: $Logo-Start-Color;
+}
+
+.logo-header .logo-end {
+    margin-right: 0;
+    color: $Logo-End-Color;
+}
+
+.logo-footer .logo-end {
+    margin-right: 0;
+    color: $Contrast-Text-Color;
+}
+
+
+/*стилизация навигации сайта*/
+
+.navigation-section {
+    display: flex;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+
+    list-style: none;
+        margin: 0px;
+        padding: 0px;
+    
+        &__item:first-child {
+            margin-left: 93px;
+        }
+        
+        &__item:not(:last-child) {
+            margin-right: 50px;
+        }
+}
+
+.nav__link {
+    display: block;
+    
+    padding-top: 32px;
+    padding-bottom: 32px;
+    
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    text-decoration: none;
+    color: $Default-Text-Color;
+    letter-spacing: 0.02em;
+
+    transition-property: color;
+    transition-duration: $Animation-Duration;
+    transition-timing-function: $Timing-Function;
+
+    &:hover, &:focus {
+        color: $Active-Link-Color;
+    }
+}
+
+.nav__link--active {
+    position: relative;
+    color: $Active-Link-Color;
+
+    &:after {
+            content: "";
+    
+            position: absolute;
+            bottom: -1px;
+            right: 0;
+    
+            width: 100%;
+            height: 4px;
+            background-color: $Active-Link-Color;
+            border-radius: 2px;
+            border: none;
+    
+        }
+}
+
+.nav__link--contacts {
+    display: inline-flex;
+    align-items: center;
+
+    color: $Primary-Text-Color;
+
+}
+
+%nav__icon {
+    fill: $Primary-Text-Color;
+
+    transition-property: fill;
+    transition-duration: $Animation-Duration;
+    transition-timing-function: $Timing-Function;
+}
+
+
+.nav__icon--mail {
+        @extend %nav__icon;
+        width: 16px;
+        height: 12px;
+        margin-right: 10px;
+        
+        
+}
+
+
+.nav__icon--phone {
+        @extend %nav__icon;
+        width: 10px;
+        height: 16px;
+        margin-right: 10px;
+}
+
+.nav__link:hover .nav__icon--mail {
+    fill: $Active-Link-Color;
+}
+
+
+.contacts {
+    margin-left: auto;
+}
+
+.contacts .item+.item {
+    margin-left: 50px;
+}
+
+/*стилизация e-mail и телефона переопределение цвета текста*/
+
+
+
+
+
+
