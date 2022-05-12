@@ -2,35 +2,17 @@
     border-bottom: $Header-Bottom-Border solid #ECECEC;
 }
 
-.logo-header {
+/*стилизация логотипа компании*/
+
+.logo__link--header {
     padding-top: 24px;
     padding-bottom: 25px;
+    text-decoration: none;
 }
 
-.logo-header,
-.logo-footer {
-    font-family: Raleway, sans-serif;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
-}
+@import './logo';
 
-.logo-start {
-    color: $Logo-Start-Color;
-}
-
-.logo-header .logo-end {
-    margin-right: 0;
-    color: $Logo-End-Color;
-}
-
-.logo-footer .logo-end {
-    margin-right: 0;
-    color: $Contrast-Text-Color;
-}
-
-
-/*стилизация навигации сайта*/
+/*стилизация навигации и контактов*/
 
 .navigation-section {
     display: flex;
@@ -76,6 +58,8 @@
 }
 
 .nav__link--active {
+    @extend .nav__link;
+    
     position: relative;
     color: $Active-Link-Color;
 
@@ -96,6 +80,8 @@
 }
 
 .nav__link--contacts {
+    @extend .nav__link;
+    
     display: inline-flex;
     align-items: center;
 
@@ -111,7 +97,6 @@
     transition-timing-function: $Timing-Function;
 }
 
-
 .nav__icon--mail {
         @extend %nav__icon;
         width: 16px;
@@ -121,7 +106,6 @@
         
 }
 
-
 .nav__icon--phone {
         @extend %nav__icon;
         width: 10px;
@@ -129,20 +113,22 @@
         margin-right: 10px;
 }
 
-.nav__link:hover .nav__icon--mail {
-    fill: $Active-Link-Color;
+.nav__link--contacts:hover, 
+.nav__link--contacts:focus {
+    .nav__icon--mail, 
+    .nav__icon--phone {
+        fill: $Active-Link-Color;
+    }   
 }
 
-
-.contacts {
+.contacts-section {
     margin-left: auto;
 }
 
-.contacts .item+.item {
+.nav__item--contacts+.nav__item--contacts {
     margin-left: 50px;
 }
 
-/*стилизация e-mail и телефона переопределение цвета текста*/
 
 
 

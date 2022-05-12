@@ -14,6 +14,7 @@ html {
 
 /* ------- */
 /* сбрасываю margins */
+span,
 h1,
 h2,
 h3,
@@ -81,34 +82,33 @@ body {
   border-bottom: 1px solid #ECECEC;
 }
 
-.logo-header {
+/*стилизация логотипа компании*/
+.logo__link--header {
   padding-top: 24px;
   padding-bottom: 25px;
+  text-decoration: none;
 }
 
-.logo-header,
-.logo-footer {
+.logo, .logo__start, .logo__end--dark, .logo__end--bright {
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
 }
 
-.logo-start {
+.logo__start {
   color: #2196f3;
 }
 
-.logo-header .logo-end {
-  margin-right: 0;
+.logo__end--dark {
   color: black;
 }
 
-.logo-footer .logo-end {
-  margin-right: 0;
+.logo__end--bright {
   color: white;
 }
 
-/*стилизация навигации сайта*/
+/*стилизация навигации и контактов*/
 .navigation-section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -135,7 +135,7 @@ body {
   margin-right: 50px;
 }
 
-.nav__link {
+.nav__link, .nav__link--active, .nav__link--contacts {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -153,7 +153,7 @@ body {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav__link:hover, .nav__link:focus {
+.nav__link:hover, .nav__link--active:hover, .nav__link--contacts:hover, .nav__link:focus, .nav__link--active:focus, .nav__link--contacts:focus {
   color: #2196f3;
 }
 
@@ -206,17 +206,18 @@ body {
   margin-right: 10px;
 }
 
-.nav__link:hover .nav__icon--mail {
+.nav__link--contacts:hover .nav__icon--mail,
+.nav__link--contacts:hover .nav__icon--phone,
+.nav__link--contacts:focus .nav__icon--mail,
+.nav__link--contacts:focus .nav__icon--phone {
   fill: #2196f3;
 }
 
-.contacts {
+.contacts-section {
   margin-left: auto;
 }
 
-.contacts .item + .item {
+.nav__item--contacts + .nav__item--contacts {
   margin-left: 50px;
 }
-
-/*стилизация e-mail и телефона переопределение цвета текста*/
 /*# sourceMappingURL=main.css.map */
