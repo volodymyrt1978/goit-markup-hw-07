@@ -14,9 +14,11 @@
 </head>
 
 <body>
-    <header class="header-decor">
+    
+    <!-- styles in _page-header.scss -->
+    <header class="header__decor">
         <!-- Section with main navigation bar -->
-        <div class="container items-in-row">
+        <div class="header">
             
             <nav class="navigation-section">
                 
@@ -53,99 +55,105 @@
         </div>
     </header>
     
-    <!-- Sections with main content -->
     <main>
+        
+        <!-- styles in _hero-section.scss -->
         <section class="hero">
             <div class="container">
-                <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-                <button type="button" class="hero-button" data-modal-open>Заказать услугу</button>
+                <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
+                <button type="button" class="hero__button" data-modal-open>Заказать услугу</button>
             </div>
         </section>
     
-    <!-- Section with soft and tech skills -->
+        <!-- styles in _our-advantages.scss -->
         <section class="section">
-        <!-- "Наши преимущества" I will hide during the CSS formatting-->
+        
             <div class="container">
+                
                 <h2 hidden>Наши преимущества</h2>
-                    <ul class="default-lists items-in-row advantages-list">
-                        <li class="item icon-antenna">
-                            <h3 class="advantages-title">Внимание к деталям</h3>
+                    
+                <ul class="advantages">
+                        
+                        <li class="advantages__item advantages__icon--antenna">
+                            <h3 class="advantages__subtitle">Внимание к деталям</h3>
                             <p>Идейные соображения, а также начало повседневной работы по формированию позиции.</p>
                         </li>
-                        <li class="item icon-clock">
-                            <h3 class="advantages-title">Пунктуальность</h3>
+                        
+                        <li class="advantages__item advantages__icon--clock">
+                            <h3 class="advantages__subtitle">Пунктуальность</h3>
                             <p>Задача организации, в особенности же рамки и место обучения кадров влечет за собой.</p>
                         </li>
-                        <li class="item icon-diagram">
-                            <h3 class="advantages-title">Планирование</h3>
+                        
+                        <li class="advantages__item advantages__icon--diagram">
+                            <h3 class="advantages__subtitle">Планирование</h3>
                             <p>Равным образом консультация с широким активом в значительной степени обуславливает.</p>
                         </li>
-                        <li class="item icon-astronaut">
-                            <h3 class="advantages-title">Современные технологии</h3>
+                        
+                        <li class="advantages__item advantages__icon--astronaut">
+                            <h3 class="advantages__subtitle">Современные технологии</h3>
                             <p>Значимость этих проблем настолько очевидна, что реализация плановых заданий.</p>
                         </li>
                     </ul>
-                </div>
+
+            </div>
         </section>
 
-    <!-- Section shows wich technologies we are using -->
-    
-        <section class="trends-section">
+        <!-- styles in _our-services.scss -->
+        <section class="section services">
             <div class="container">
-                <h2 class="trends title">Чем мы занимаемся</h2>
-                        <ul class="default-lists trends-list trends-content">
-                            <li class="item"><img src="./images/box1_opt.jpg" alt="Десктопные приложения" width="370">
-                            <p class="description">Десктопные приложения</p>
+                <h2 class="section__title">Чем мы занимаемся</h2>
+                        <ul class="application">
+                            <li class="application__item"><img src="./images/box1_opt.jpg" alt="Десктопные приложения" width="370">
+                            <p class="application__description">Десктопные приложения</p>
                             </li>
-                            <li class="item"><img src="./images/box2_opt.jpg" alt="Мобильные приложения" width="370">
-                            <p class="description">Мобильные приложения</p>
+                            <li class="application__item"><img src="./images/box2_opt.jpg" alt="Мобильные приложения" width="370">
+                            <p class="application__description">Мобильные приложения</p>
                             </li>
-                            <li class="item"><img src="./images/box3_opt.jpg" alt="Дизайнерские решения" width="370">
-                            <p class="description">Дизайнерские решения</p>
+                            <li class="application__item"><img src="./images/box3_opt.jpg" alt="Дизайнерские решения" width="370">
+                            <p class="application__description">Дизайнерские решения</p>
                             </li>
                         </ul>
             </div>
         </section>
     
-        <!-- Section with members of our team -->
-    
-        <section class="teamsection section">
+        <!-- styles in _our-services.scss -->
+        <section class="teamsection">
             <div class="container">
-                <h2 class="title">Наша команда</h2>
-                    <ul class="default-lists team">    
+                <h2 class="section__title">Наша команда</h2>
+                    <ul class="team">    
                         
-                            <li class="item">
+                            <li class="team__item">
                                 
                                     <img src="./images/team_card_1_opt.jpg" alt="Игорь Демьяненко" width="270">
                                     
-                                    <div class="card-content">
-                                        <h3 class="name">Игорь Демьяненко</h3>
-                                        <p lang="en" class="profession">Product Designer</p>
-                                        <ul class="default-lists items-in-row">
-                                            <li class="card-links">
-                                                <a href="#" class="links-box">
-                                                    <svg class="icon">
+                                    <div class="card">
+                                        <h3 class="card__name">Игорь Демьяненко</h3>
+                                        <p lang="en" class="card__profession">Product Designer</p>
+                                        <ul class="nets">
+                                            <li class="nets__item">
+                                                <a href="#" class="links-box nets__link">
+                                                    <svg class="icon nets__icon">
                                                         <use href="./images/sprite.svg#instagram"></use>
                                                     </svg>
                                                 </a>
                                             </li>
-                                            <li class="card-links">
-                                                <a href="#" class="links-box">
-                                                    <svg class="icon">
+                                            <li class="nets__item">
+                                                <a href="#" class="links-box nets__link">
+                                                    <svg class="icon nets__icon">
                                                         <use href="./images/sprite.svg#twitter"></use>
                                                     </svg>
                                                 </a>
                                             </li>
-                                            <li class="card-links">
-                                                <a href="#" class="links-box">
-                                                    <svg class="icon">
+                                            <li class="nets__item">
+                                                <a href="#" class="links-box nets__link">
+                                                    <svg class="icon nets__icon">
                                                         <use href="./images/sprite.svg#facebook"></use>
                                                     </svg>
                                                 </a>
                                             </li>
-                                            <li class="card-links">
-                                                <a href="#" class="links-box">
-                                                    <svg class="icon">
+                                            <li class="nets__item">
+                                                <a href="#" class="links-box nets__link">
+                                                    <svg class="icon nets__icon">
                                                         <use href="./images/sprite.svg#linkedin"></use>
                                                     </svg>
                                                 </a>
@@ -155,38 +163,38 @@
                                 
                             </li>
                         
-                            <li class="item">  
+                            <li class="team__item">  
                                 
                                     <img src="./images/team_card_2_opt.jpg" alt="Ольга Репина" width="270">
                                     
-                                    <div class="card-content">
-                                        <h3 class="name">Ольга Репина</h3>
-                                        <p lang="en" class="profession">Frontend Developer</p>
-                                        <ul class="default-lists items-in-row">
-                                            <li class="card-links">
-                                                <a href="#" class="links-box">
-                                                    <svg class="icon">
+                                    <div class="card">
+                                        <h3 class="card__name">Ольга Репина</h3>
+                                        <p lang="en" class="card__profession">Frontend Developer</p>
+                                        <ul class="nets">
+                                            <li class="nets__item">
+                                                <a href="#" class="links-box nets__link">
+                                                    <svg class="icon nets__icon">
                                                         <use href="./images/sprite.svg#instagram"></use>
                                                     </svg>
                                                 </a>
                                             </li>
-                                            <li class="card-links">
-                                                <a href="#" class="links-box">
-                                                    <svg class="icon">
+                                            <li class="nets__item">
+                                                <a href="#" class="links-box nets__link">
+                                                    <svg class="icon nets__icon">
                                                         <use href="./images/sprite.svg#twitter"></use>
                                                     </svg>
                                                 </a>
                                             </li>
-                                            <li class="card-links">
-                                                <a href="#" class="links-box">
-                                                    <svg class="icon">
+                                            <li class="nets__item">
+                                                <a href="#" class="links-box nets__link">
+                                                    <svg class="icon nets__icon">
                                                         <use href="./images/sprite.svg#facebook"></use>
                                                     </svg>
                                                 </a>
                                             </li>
-                                            <li class="card-links">
-                                                <a href="#" class="links-box">
-                                                    <svg class="icon">
+                                            <li class="nets__item">
+                                                <a href="#" class="links-box nets__link">
+                                                    <svg class="icon nets__icon">
                                                         <use href="./images/sprite.svg#linkedin"></use>
                                                     </svg>
                                                 </a>
@@ -196,38 +204,38 @@
                                 
                             </li>
                         
-                            <li class="item">  
+                            <li class="team__item">  
                                 
                                     <img src="./images/team_card_3_opt.jpg" alt="Николай Тарасов" width="270">
                                     
-                                    <div class="card-content">
-                                        <h3 class="name">Николай Тарасов</h3>
-                                        <p lang="en" class="profession">Marketing</p>
-                                        <ul class="default-lists items-in-row">
-                                            <li class="card-links">
-                                                <a href="#" class="links-box">
-                                                    <svg class="icon">
+                                    <div class="card">
+                                        <h3 class="card__name">Николай Тарасов</h3>
+                                        <p lang="en" class="card__profession">Marketing</p>
+                                        <ul class="nets">
+                                            <li class="nets__item">
+                                                <a href="#" class="nets__link">
+                                                    <svg class="nets__icon">
                                                         <use href="./images/sprite.svg#instagram"></use>
                                                     </svg>
                                                 </a>
                                             </li>
-                                            <li class="card-links">
-                                                <a href="#" class="links-box">
-                                                    <svg class="icon">
+                                            <li class="nets__item">
+                                                <a href="#" class="nets__link">
+                                                    <svg class="nets__icon">
                                                         <use href="./images/sprite.svg#twitter"></use>
                                                     </svg>
                                                 </a>
                                             </li>
-                                            <li class="card-links">
-                                                <a href="#" class="links-box">
-                                                    <svg class="icon">
+                                            <li class="nets__item">
+                                                <a href="#" class="nets__link">
+                                                    <svg class="nets__icon">
                                                         <use href="./images/sprite.svg#facebook"></use>
                                                     </svg>
                                                 </a>
                                             </li>
-                                            <li class="card-links">
-                                                <a href="#" class="links-box">
-                                                    <svg class="icon">
+                                            <li class="nets__item">
+                                                <a href="#" class="nets__link">
+                                                    <svg class="nets__icon">
                                                         <use href="./images/sprite.svg#linkedin"></use>
                                                     </svg>
                                                 </a>
@@ -237,38 +245,38 @@
                                 
                             </li>
                         
-                            <li class="item">
+                            <li class="team__item">
                                 
                                     <img src="./images/team_card_4_opt.jpg" alt="Михаил Ермаков" width="270">
                                     
-                                    <div class="card-content">
-                                        <h3 class="name">Михаил Ермаков</h3>
-                                        <p lang="en" class="profession">UI Designer</p>
-                                        <ul class="default-lists items-in-row">
-                                            <li class="card-links">
-                                                <a href="#" class="links-box">
-                                                    <svg class="icon">
+                                    <div class="card">
+                                        <h3 class="card__name">Михаил Ермаков</h3>
+                                        <p lang="en" class="card__profession">UI Designer</p>
+                                        <ul class="nets">
+                                            <li class="nets__item">
+                                                <a href="#" class="nets__link">
+                                                    <svg class="nets__icon">
                                                         <use href="./images/sprite.svg#instagram"></use>
                                                     </svg>
                                                 </a>
                                             </li>
-                                            <li class="card-links">
-                                                <a href="#" class="links-box">
-                                                    <svg class="icon">
+                                            <li class="nets__item">
+                                                <a href="#" class="nets__link">
+                                                    <svg class="nets__icon">
                                                         <use href="./images/sprite.svg#twitter"></use>
                                                     </svg>
                                                 </a>
                                             </li>
-                                            <li class="card-links">
-                                                <a href="#" class="links-box">
-                                                    <svg class="icon">
+                                            <li class="nets__item">
+                                                <a href="#" class="nets__link">
+                                                    <svg class="nets__icon">
                                                         <use href="./images/sprite.svg#facebook"></use>
                                                     </svg>
                                                 </a>
                                             </li>
-                                            <li class="card-links">
-                                                <a href="#" class="links-box">
-                                                    <svg class="icon">
+                                            <li class="nets__item">
+                                                <a href="#" class="nets__link">
+                                                    <svg class="nets__icon">
                                                         <use href="./images/sprite.svg#linkedin"></use>
                                                     </svg>
                                                 </a>
@@ -281,53 +289,54 @@
             </div>
         </section>
 
-        <section class="section clients">
+        <!-- styles in _our-clients.scss -->
+        <section class="section">
             <div class="container">
-                <h2 class="title">Постоянные клиенты</h2>
-                <ul class="default-lists items-in-row">
-                    <li class="item">
-                        <a href="#" class="link-logo">
-                            <svg class="item-logo">
+                <h2 class="section__title">Постоянные клиенты</h2>
+                <ul class="clients">
+                    <li class="clients__item">
+                        <a href="#" class="clients__link">
+                            <svg class="clients__logo">
                                 <use href="./images/sprite.svg#logo-first"></use>
                             </svg>
                         </a>
                     </li>
                     
-                    <li class="item">
-                        <a href="#" class="link-logo">
-                            <svg class="item-logo">
+                    <li class="clients__item">
+                        <a href="#" class="clients__link">
+                            <svg class="clients__logo">
                                 <use href="./images/sprite.svg#logo-second"></use>
                             </svg>
                         </a>
                     </li>
                     
-                    <li class="item">
-                        <a href="#" class="link-logo">
-                            <svg class="item-logo">
+                    <li class="clients__item">
+                        <a href="#" class="clients__link">
+                            <svg class="clients__logo">
                                 <use href="./images/sprite.svg#logo-third"></use>
                             </svg>
                         </a>
                     </li>
                     
-                    <li class="item">
-                        <a href="#" class="link-logo">
-                            <svg class="item-logo">
+                    <li class="clients__item">
+                        <a href="#" class="clients__link">
+                            <svg class="clients__logo">
                                 <use href="./images/sprite.svg#logo-fourth"></use>
                             </svg>
                         </a>
                     </li>
                     
-                    <li class="item">
-                        <a href="#" class="link-logo">
-                            <svg class="item-logo">
+                    <li class="clients__item">
+                        <a href="#" class="clients__link">
+                            <svg class="clients__logo">
                                 <use href="./images/sprite.svg#logo-fifth"></use>
                             </svg>
                         </a>
                     </li>
                     
-                    <li class="item">
-                        <a href="#" class="link-logo">
-                            <svg class="item-logo">
+                    <li class="clients__item">
+                        <a href="#" class="clients__link">
+                            <svg class="clients__logo">
                                 <use href="./images/sprite.svg#logo-sixth"></use>
                             </svg>
                         </a>
