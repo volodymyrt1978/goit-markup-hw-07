@@ -346,65 +346,64 @@
         </section>
     </main>
 
-    <!-- Modal window -->
-
+        <!-- styles in _modal-window -->
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-            <button type="button" class="icon-close" data-modal-close>
-                <svg class="inside-icon">
+            <button type="button" class="modal__button" data-modal-close>
+                <svg class="button__icon">
                     <use href="./images/sprite.svg#close-icon"></use>
                 </svg>
             </button>
 
-            <div role="group" aria-labelledby="feedback-head" class="feedback-section">
-                <p id="feedback-head" class="feedback-action">Оставьте свои данные, мы вам перезвоним</p>
+            <div role="group" aria-labelledby="feedback-head" class="feedback">
+                <p id="feedback-head" class="feedback__action">Оставьте свои данные, мы вам перезвоним</p>
             
-                <form name="feedback-form" autocomplete="on" class="feedback-form">
+                <form name="feedback-form" autocomplete="on" class="feedback__form">
             
-                    <div class="form-field">
-                        <label for="name" class="form-label">Имя</label>
-                        <input type="text" name="username" id="name" required>
-                        <svg class="icon-form">
+                    <div class="form__field">
+                        <label for="name" class="field__label">Имя</label>
+                        <input type="text" name="username" id="name" required class="field__input">
+                        <svg class="field__icon">
                             <use href="./images/sprite.svg#person"></use>
                         </svg>
                     </div>
             
-                    <div class="form-field">
-                        <label for="tel-number" class="form-label">Телефон</label>
-                        <input type="tel" name="telephone-number" id="tel-number" required>
-                        <svg class="icon-form">
+                    <div class="form__field">
+                        <label for="tel-number" class="field__label">Телефон</label>
+                        <input type="tel" name="telephone-number" id="tel-number" required class="field__input">
+                        <svg class="field__icon">
                             <use href="./images/sprite.svg#phone"></use>
                         </svg>
                     </div>
             
-                    <div class="form-field">
-                        <label for="email" class="form-label">Почта</label>
-                        <input type="email" name="email" id="email" required>
-                        <svg class="icon-form">
+                    <div class="form__field">
+                        <label for="email" class="field__label">Почта</label>
+                        <input type="email" name="email" id="email" required class="field__input">
+                        <svg class="field__icon">
                             <use href="./images/sprite.svg#email"></use>
                         </svg>
                     </div>
             
-                    <div class="form-field-comment">
-                        <label for="comment" class="form-label">Комментарий</label>
-                        <textarea name="comment" id="comment" placeholder="Введите текст"></textarea>
+                    <div class="form__field--comment">
+                        <label for="comment" class="field__label">Комментарий</label>
+                        <textarea name="comment" id="comment" placeholder="Введите текст" class="field__input--comment"></textarea>
                     </div>
             
-                    <div class="form-field-concent">
-                        <label class="form-label">
-                            <input type="checkbox" name="concent" id="concent" required>
-                            <svg class="icon-checked">
+                    <div class="form__field--consent">
+                        <label class="field__label--consent">
+                            <input type="checkbox" name="concent" id="concent" required class="field__input--consent">
+                            <svg class="field__icon--checked">
                                 <use href="./images/sprite.svg#icon-checkbox"></use>
                             </svg>
-                        <span class="concent-label">Соглашаюсь с рассылкой и принимаю&nbsp;</span>
+                        <span class="agreement__text">Соглашаюсь с рассылкой и принимаю&nbsp;</span>
                         </label>
-                        <span class="policy">
-                            <a href="" class="policy-agreement">Условия договора</a>
+                        <span class="agreement__policy">
+                            <a href="" class="agreement__link">Условия договора</a>
                         </span>
                     </div>
             
             
-                    <button type="submit" class="button">Отправить</button>
+                    <button type="submit" class="form__button">Отправить</button>
             
                 </form>
             </div>
@@ -415,59 +414,59 @@
 
     <!-- Footer section -->
 
-    <footer class="pagefoot">
-        <div class="container items-in-row">
+    <footer class="footer">
+        <div class="footer__container">
             
             <div>
-                <a href="" lang="en" class="default-links logo-footer">
-                    <span class="logo-start">Web</span><span class="logo-end">Studio</span>
+                <a href="" lang="en" class="logo logo__link--footer">
+                    <span class="logo__start">Web</span><span class="logo__end--bright">Studio</span>
                 </a>
-                <address class="content-position">
-                    <ul class="default-lists">
-                        <li>
-                            <p class="address">г. Киев, пр-т Леси Украинки, 26</p>
-                        </li> <!--Probably it will be link to google maps. But there is no any icons in figma-->
+                <address>
+                    <ul class="address">
+                        <li class="address__item">
+                            <p class="address__postal">г. Киев, пр-т Леси Украинки, 26</p>
+                        </li>
                         
-                        <li>
-                            <a href="mailto:info@example.com" lang="en" class="default-links mailtel">info@example.com</a>
+                        <li class="address__item">
+                            <a href="mailto:info@example.com" lang="en" class="address__mailtel">info@example.com</a>
                         </li> <!--email address is different from header-->
                         
-                        <li>
-                            <a href="tel:+380991111111" class="default-links mailtel">+38 099 111 11 11</a>
+                        <li class="address__item">
+                            <a href="tel:+380991111111" class="address__mailtel">+38 099 111 11 11</a>
                         </li> <!--phone number is different from header-->
                     </ul>
                 </address>
             </div>
             
                 <div class="social-links">
-                    <p class="title">присоединяйтесь</p>
-                    <ul class="default-lists items-in-row">
-                        <li class="item icon-insta">
-                            <a href="" aria-details="Instagram" class="default-links"></a>
+                    <p class="social-links__action">присоединяйтесь</p>
+                    <ul class="link-box">
+                        <li class="link-box__item icon-insta">
+                            <a href="" aria-details="Instagram"></a>
                         </li>
 
-                        <li class="item icon-twit">
-                            <a href="" aria-details="Twitter" class="default-links"></a>
+                        <li class="link-box__item icon-twit">
+                            <a href="" aria-details="Twitter"></a>
                         </li>
 
-                        <li class="item icon-fb">
-                            <a href="" aria-details="Facebook" class="default-links"></a>
+                        <li class="link-box__item icon-fb">
+                            <a href="" aria-details="Facebook"></a>
                         </li>
 
-                        <li class="item icon-lin">
-                            <a href="" aria-details="LinkedIn" class="default-links"></a>
+                        <li class="link-box__item icon-lin">
+                            <a href="" aria-details="LinkedIn"></a>
                         </li>
                     </ul>
                 </div>
 
-                <div role="group" aria-labelledby="signup-head" class="signup-section">
+                <div role="group" aria-labelledby="signup-head" class="signup">
                     
-                    <p id="signup-head" class="signup-action">Подпишитесь на рассылку</p>
+                    <p id="signup-head" class="signup__action">Подпишитесь на рассылку</p>
                     
                     <form name="signup-form" autocomplete="on">
                         <label for="user_email"></label>
-                        <input type="email" name="email" id="user_email" placeholder="E-mail" required>
-                        <button type="submit" class="signup-button">Подписаться</button>
+                        <input type="email" name="email" id="user_email" placeholder="E-mail" required class="signup__input">
+                        <button type="submit" class="signup__button">Подписаться</button>
                     </form>
                     
                 </div>

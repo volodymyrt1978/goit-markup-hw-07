@@ -70,7 +70,7 @@
             content: "";
     
             position: absolute;
-            bottom: -1px;
+            bottom: calc(-1*#{$Header-Bottom-Border});
             right: 0;
     
             width: 100%;
